@@ -1,0 +1,10 @@
+/*:root {
+  --cor-de-fundo: #f0f0f0;
+  --cor-de-texto: #333;
+  --tamanho-fonte: 16px;
+}
+/*body {
+  background-color: var(--cor-de-fundo);
+  color: var(--cor-de-texto);
+  font-size: var(--tamanho-fonte);
+}

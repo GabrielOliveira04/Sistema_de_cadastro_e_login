@@ -1,0 +1,42 @@
+<!doctype html>
+{% load static %}
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Usuarios</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+<div class="container">
+    <table class="table is-fullwidth">
+      <tr>
+        <th>id</th>
+        <th>Primeiro Nome</th>
+        <th>Sobrenome</th>
+        <th>E-mail</th>
+        <th>Numero de telefone</th>
+        <th>Senha</th>
+        <th>Confirme sua senha</th>
+      </tr>
+
+       {% for usuario in usuarios %}
+        <tr>
+          <td>{{usuario.id_usuario}}</td>
+          <td>{{usuario.firstname}}</td>
+          <td>{{usuario.lastname}}</td>
+          <td>{{usuario.email}}</td>
+          <td>{{usuario.number}}</td>
+          <td>{{usuario.password}}</td>
+          <td>{{usuario.confirm_password}}</td>
+          <td>{{usuario.gender_choice}}</td>
+          <td>{{usuario.gender}}</td>
+        </tr>
+       {% endfor %}
+    </table>
+</div>
+</body>
+</html>
